@@ -10,50 +10,61 @@
 <!--    <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 </head>
-<body>
-<h1>  </h1>
-<table style="width: 499px;">
-<tbody>
-<tr>
-<td style="width: 499px; text-align: center;">
-<p>Your Referral：</p>
-<table align="center">
-<tbody>
-<tr>
-<td style="text-align: center; width: 204px;"><input id="address" name="address" readonly="readonly" size="25" type="text" /></td>
-</tr>
-</tbody>
-</table>
-<button onclick="copyUrl()">Copy</button></td>
-</tr>
-<tr>
-<td style="width: 499px; text-align: center;">
-<p>&nbsp;Your Amount:</p>
-<table align="center">
-<tbody>
-<tr>
-<td style="text-align: center;"><input id="output" name="value" readonly="readonly" size="10" type="text" /></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr>
-<td style="width: 499px; text-align: center;">
-<p>Investments：</p>
-<table align="center">
-<tbody>
-<tr>
-<td style="text-align: center;"><input id="invest" name="invest" size="20" type="text" /></td>
-</tr>
-</tbody>
-</table>
-<button>PAY</button>
-</td>
-</tr>
-</tbody>
-</table>
 
+<style>
+div.blueTable {
+  width: 100%;
+  height: 200%;
+  text-align: center;
+}
+.divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
+}
+.divTable.blueTable .divTableBody .divTableCell {
+  font-size: 13px;
+}
+.blueTable .tableFootStyle {
+  font-size: 14px;
+}
+.blueTable .tableFootStyle .links {
+	 text-align: right;
+}
+.blueTable .tableFootStyle .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.blueTable.outerTableFooter {
+  border-top: none;
+}
+.blueTable.outerTableFooter .tableFootStyle {
+  padding: 3px 5px; 
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
+</style>
+
+<body>
+<div class="divTable blueTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Your Referral: <p><input id="address" name="address" readonly="readonly" size="25" type="text" /><button onclick="copyUrl()">Copy</button></span></span></div>
+<div class="divTableCell"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Acc. Balance: <p><input id="output" name="balance" readonly="readonly" size="25" type="text" /></span></span></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Investment: <p><input id="invest" name="invest" size="20" type="text" /><button>PAY</button></span></span></div>
+<div class="divTableCell"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></div>
+</div>
+</div>
+</div>
+</body>
 
 <p id="blockNumber"></p>
 <p id="timestamp"></p>
